@@ -17,6 +17,9 @@ object HelloWorld {
     * 括号后面用冒号分隔，是输出类型
     * scala中没有static关键字，用object来实现相应的功能
     * 伴生对象
+    * - 伴随着类产生的一个对象，只有一个实例
+    * - 如果类本身没有定义，直接定义一个对象，就叫做单例对象
+    *
     * @param args
     */
   def main(args: Array[String]): Unit = {
@@ -25,4 +28,4 @@ object HelloWorld {
   }
 }
 
-class HelloWorld{}
+//class HelloWorld{}
