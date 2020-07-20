@@ -59,5 +59,14 @@ object Test07_Cast {
     val m: Long= 214748364999L
     val n: Int = m.toInt
     println(n)
+
+    // 3. String和数值类型的转换
+    // (1)数值转换成字符串
+    val str: String =  10 + ""
+    // (2)字符串转数值
+    val num1: Int = "123".toInt
+//    val num2: Int = "12.3".toInt   // 编译不报错，但运行报错
+    val num2: Int = "12.3".toDouble.toInt
+    println(num2)
   }
 }
