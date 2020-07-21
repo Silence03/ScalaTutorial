@@ -1,5 +1,6 @@
 package com.atguigu.chapter4
 
+import scala.collection.immutable
 import scala.util.Random
 
 /**
@@ -89,5 +90,48 @@ object Test02_For {
 //    for( i <- 1 to 10 by 0 ){
 //      print(i)
 //    }
+
+    // 7. 嵌套循环
+    for( i <- 1 to 5 ){
+      for( j <- 1 to 6 ){
+        print("i:" + i + ",j:" + j + "\t")
+      }
+      print("\n")
+    }
+
+    for( i <- 1 to 5; j <- 1 to 6 ){
+      print("i:" + i + ",j:" + j + "\t")
+      if( j == 6 ) println()
+    }
+
+    // 8. 引入变量
+    for( i <- 1 to 10; j = 10 - i ){
+      println("i: " + i + ", j: " + j)
+    }
+//    for( i <- 1 to 10 ){
+//      val j = 10 - i
+//      println("i: " + i + ", j: " + j)
+//    }
+    for{
+      i <- 1 to 10
+      j = 10 - i
+    }{
+      println("i: " + i + ", j: " + j)
+    }
+
+    // 9. 循环返回值
+    // 默认值是Unit
+    val unit: Unit = for (i <- 1 to 10) {
+      println(i)
+      10
+    }
+
+    // 可以用yield关键字，定义一个表达式进行计算，得到的结果保存到一个集合类型中
+    val res: immutable.IndexedSeq[Int] = for (i <- 1 to 10) yield i * i
+    println(res)
+
+    // 10. 遍历一般的集合类型
+//    for( x <- Range.inclusive(1, 10, 1) ){}
+    for( x <- Array(23,324,35,1.2,"hello") reverse ) println(x)
   }
 }
