@@ -30,6 +30,7 @@ object Test04_Simplify {
 
     //（3）返回值类型如果能够推断出来，那么可以省略（:和返回值类型一起省略）
     def f3(name: String) = name
+    def add2(a: Int, b: Int) = a + b
 
     //（4）如果有return，则不能省略返回值类型，必须指定
     //    def f4(name: String) = {
@@ -82,7 +83,7 @@ object Test04_Simplify {
 
     // 匿名函数可以用来扩展函数功能，具体扩展是通过将函数作为参数传给另一个函数实现的
     // 定义一个f10，作用是传入一个函数，执行这个函数
-    def f10( fun: (String) => Unit ): Unit = {
+    def f10( fun: (String) => Unit ) {
       println("这是调用别的函数的一个高层级函数，要调的函数作为参数传入")
       fun("atguigu")    // 把具体执行函数的参数固化
     }
