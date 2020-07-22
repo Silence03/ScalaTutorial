@@ -11,10 +11,18 @@ package com.atguigu.chapter4
   */
 object Problem2_Pyramid {
   def main(args: Array[String]): Unit = {
-    for (agent <-1 to 9){
-      var num = agent*2-1
-      var mie =10 -agent
-      println(" "*mie+"*"*num)
+    for (agent <- 1 to 9){
+      val num = agent * 2 - 1
+      val mie = 9 - agent
+      println(" " * mie + "*" * num)
     }
+
+    for( i <- 1 to 9; m = i * 2 - 1; n = 9 - i ){
+      println(" " * n + "*" * m)
+    }
+    for( i <- 1 to 9 ) println(" " * (9-i) + "*" * (i*2-1))
+
+    for( m <- 1 to 17 by 2; n = (17 - m) / 2 )
+      println(" " * n + "*" * m)
   }
 }
