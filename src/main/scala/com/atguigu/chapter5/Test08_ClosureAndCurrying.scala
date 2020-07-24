@@ -52,5 +52,11 @@ object Test08_ClosureAndCurrying {
     def addCurrying(a: Int)(b: Int): Int = a + b
 
     println(addCurrying(8)(9))
+
+    val addByEight = addCurrying(8)(_)    // 偏应用函数，用下划线代表不传第二个参数，得到中间函数
+    println(addByEight(19))
+
+    val addByNine = add(9, _)
+    println(addByNine(13))
   }
 }
