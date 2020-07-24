@@ -43,10 +43,27 @@ object Test06_Practise {
       f1
     }
 
+//    def func2(i: Int): String=>(Char=>Boolean) = {
+//      def f1(s: String): Char=>Boolean = {
+//        val i_f1 = i
+//        def f2(c: Char): Boolean = {
+//          val i_f2 = i_f1
+//          val s_f2 = s
+//          !(i_f2 == 0 && s_f2 == "" && c == '0')
+//        }
+//        f2
+//      }
+//      f1
+//    }
+
     // 用lambda表达式进行简写
     def func1(i: Int): String=>(Char=>Boolean) = {
       (s: String) =>  (c: Char) => !(i == 0 && s == "" && c == '0')
     }
+
+    def func2(i: Int)(s: String)(c: Char): Boolean = !(i == 0 && s == "" && c == '0')
+
+    println(func2(0)("")('0'))
 
     println(func1(0)("")('0'))
     println(func1(34)("")('0'))
