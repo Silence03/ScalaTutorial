@@ -35,4 +35,5 @@ class Student{
 
   // 如果想要给属性赋默认空值，可以直接用_表示
   var sex: String = _
+
 }
