@@ -64,5 +64,23 @@ object Test01_Array {
 
     println(arr2.mkString(","))
 
+    println("=============================")
+
+    // 4. 向数组中增加元素，得到一个新的数组
+    val newArr1: Array[Int] = arr2.:+(10)     // 追加元素到数组末尾，返回一个新的数组
+    println(arr2.mkString(","))
+    println(newArr1.mkString(","))
+
+    val newArr2 = newArr1 :+ 17
+
+    // 将元素追加到数组开头
+    val newArr3 = arr2.+:(35)
+    println(newArr3.mkString(","))
+
+    // 在scala中，如果运算符包含冒号，而且冒号在后面，方法调用是从右到左
+//    val newArr4 = newArr3 +: 29
+    val newArr4 = 29 +: newArr3
+    println(newArr4.mkString(","))
+
   }
 }
