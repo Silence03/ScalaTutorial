@@ -18,11 +18,13 @@ object Test09_CommonOp {
     // 以list为例
     val list = ListBuffer(1,2,4,5,58,5,9)
     val set = Set(1,3,2)
+
     // 1. 获取集合长度（序列）
     println(list.length)
 
     // 2. 获取集合的大小
     println(list.size)
+
     // 3. 循环遍历
     for (elem <- list) {println(elem)}
     list.foreach(println)

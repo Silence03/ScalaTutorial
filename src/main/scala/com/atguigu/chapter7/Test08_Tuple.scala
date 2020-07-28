@@ -36,7 +36,7 @@ object Test08_Tuple {
 
     // 5. 元组嵌套
     // 元组的元素可以是任何数据类型
-    val tuple2 = (11, "hello", (2.5, 35), ("hello", "scala"))
+    val tuple2 = (11, "hello", (2.5, 35), ("hello", "scala"), List(1,3))
     println( tuple2._2 + "\t" + tuple2._4._2 )
   }
 }
