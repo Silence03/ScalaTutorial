@@ -58,5 +58,8 @@ object Test12_HighLevelFun_Map {
 
     // 作业：根据一组词的首字母进行分组
     val wordList: List[String] = List("china", "america", "alice", "canada", "japan")
+//    val groupWordMap: Map[Char, List[String]] = wordList.groupBy( _.charAt(0) )
+    val groupWordMap: Map[Char, List[String]] = wordList.groupBy( _.head )
+    println(groupWordMap)
   }
 }
